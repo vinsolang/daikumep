@@ -16,15 +16,20 @@
 @section('content')
     <section class="relative -top-[40px] md:-top-[130px] bg-[#ffffff] min-h-screen whyus_clip">
 
-        <img src="{{ asset('assets/images/line.png') }}" alt="" class="w-full hidden lg:block pt-4 xl:pt-10"
+        <img src="{{ asset('assets/images/line_career.png') }}" alt="" class="w-full hidden lg:block pt-4 xl:pt-10"
             data-aos="fade-up" data-aos-duration="1000">
 
         <div class="w-full max-w-5xl mx-auto py-20 2xl:pt-20 2xl:pb-0 text-[14px] md:text-[16px] px-4" data-aos="fade-right" data-aos-duration="1000">
-            <p class="text-[20px] md:text-[30px] text-[#1C4089] font-[700] pt-5">Be Part of a Fast-Growing Firm in the MEP Industry.</p>
-            <p class="pt-2">At A2Z M&E Engineer, we're more than just a provider of Mechanical, Electrical, and Plumbing (MEP) solutions-we are a fast-growing firm with a vision for the future. Our commitment to innovation, sustainability, and excellence has positioned us as a leader in delivering cutting-edge projects across diverse industries.</p>
+            <p class="text-[20px] md:text-[30px] text-[#000000] font-[700] pt-5">Be Part of a Fast-Growing Firm in the MEP Industry.</p>
+            <p class="pt-2">
+                At Daiku MEP Solution, we're more than just a provider of Mechanical, Electrical, 
+                and Plumbing (MEP) solutions-we are a fast-growing firm with a vision for the future. 
+                Our commitment to innovation, sustainability, 
+                and excellence has positioned us as a leader in delivering cutting-edge projects across diverse industries.
+            </p>
 
 
-            <h1 class="text-[20px] md:text-[30px] text-[#1C4089] font-[700] mt-10" data-aos="fade-right" data-aos-duration="1000">Why Join a Fast-Growing Company Like Ours ?</h1>
+            <h1 class="text-[20px] md:text-[30px] text-[#000000] font-[700] mt-10" data-aos="fade-right" data-aos-duration="1000">Why Join a Fast-Growing Company Like Ours ?</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 pt-10">
                 <div class="flex space-x-4 items-start justify-start"  data-aos="fade-right" data-aos-duration="1000">
                     <div>
@@ -64,11 +69,11 @@
                 </div>
             </div>
 
-            <h1 class="text-[20px] md:text-[30px] text-[#1C4089] font-[700] mt-10" data-aos="fade-right" data-aos-duration="1000">Explore Careers and Apply Today</h1>
+            <h1 class="text-[20px] md:text-[30px] text-[#1C4089] font-[700] mt-10" data-aos="fade-right" data-aos-duration="1000">Electrical System</h1>
             <p class="mt-3"  data-aos="fade-right" data-aos-duration="1000">Be part of a fast-growing firm that’s shaping the future of MEP solutions—let’s build something extraordinary together!</p>
             <div class="flex items-center space-x-2 mt-4" data-aos="fade-right" data-aos-duration="1000">
                 <svg class="w-6" id="OBJECT" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs"><g width="100%" height="100%" transform="matrix(1,0,0,1,0,0)"><path d="m457 61h-402a55.06 55.06 0 0 0 -55 55v280a55.06 55.06 0 0 0 55 55h402a55.06 55.06 0 0 0 55-55v-280a55.06 55.06 0 0 0 -55-55zm25 55v280a24.24 24.24 0 0 1 -.27 3.63l-144.22-143.63 144.22-143.63a24.24 24.24 0 0 1 .27 3.63zm-25-25a26 26 0 0 1 3.44.24l-204.44 203.59-204.44-203.59a26 26 0 0 1 3.44-.24zm-426.73 308.63a24.24 24.24 0 0 1 -.27-3.63v-280a24.24 24.24 0 0 1 .27-3.63l144.22 143.63zm24.73 21.37a26 26 0 0 1 -3.44-.24l144.19-143.59 49.67 49.46a15 15 0 0 0 21.16 0l49.67-49.46 144.19 143.59a26 26 0 0 1 -3.44.24z" fill="#1c4089" fill-opacity="1" data-original-color="#000000ff" stroke="none" stroke-opacity="1"/></g></svg>
-                <a href="mailto:a2zengineering.kh@gmail.com" class="hover:text-[#1C4089] hover:underline duration-500">a2zengineering.kh@gmail.com</a>
+                <a href="mailto:daikumep@gmail.com" class="hover:text-[#1C4089] hover:underline duration-500">daikumep@gmail.com</a>
             </div>
         </div>
     </section>

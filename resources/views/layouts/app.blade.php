@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>A2z Website</title>
+    <title>Daiku MEP Solution</title>
 
 
     {{-- logo --}}
-    <link rel="stylesheet icon" href="{{ asset('assets/images/logo.png') }}">
+    <link rel="icon" sizes="16x16" href="{{ asset('assets/images/logo-daiku.png') }}" class="w-5 h-5">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +33,13 @@
 
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
 
+
     @yield('css')
 
     <style>
         .nav-item .active {
             font-weight: 700;
-            color: #deb266;
+            color: #f26b27;
         }
 
         .nav-item .active::before {
@@ -48,8 +49,9 @@
             left: -10px;
             width: calc(100% + 20px);
             height: 6px;
-            background-color: #deb266;
+            background-color: #f26b27;
         }
+
         video {
             object-fit: cover;
             height: 100%;
@@ -67,7 +69,7 @@
 <body class="font-sans w-full antialiased" style="font-family: 'Inter', sans-serif;">
     <div class="relative h-[40vh] sm:h-[70vh] md:h-[100vh] lg:h-[135.8vh] w-full overflow-hidden"
         style="background-image: url('fallback-image.jpg');">
-        <video autoplay muted loop playsinline class="absolute inset-0 z-0 object-cover w-full h-full"
+        <video autoplay muted loop playsinline class="absolute inset-0 -z-50 object-cover w-full h-full"
             poster="fallback-image.jpg">
             <source src="{{ url('assets/images/video.mp4') }}" type="video/mp4">
             <source src="{{ url('assets/images/video.webm') }}" type="video/webm">
@@ -77,6 +79,18 @@
         @include('components.navbar')
         @include('components.welcome')
     </div>
+    <!-- SVG OVERLAY -->
+    @if (!request()->routeIs('career', 'project'))
+        <div class="hidden absolute xl:bottom-[-265px] left-0 w-full xl:flex justify-between z-30 pointer-events-none">
+            <svg width="511" height="168" viewBox="0 0 511 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-2 0V61L510.5 167.051L-2 0Z" fill="#C2C2C2" />
+            </svg>
+
+            <svg width="922" height="169" viewBox="0 0 922 169" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M924 0L0 168.5L924 60V0Z" fill="#C2C2C2" />
+            </svg>
+        </div>
+    @endif
 
 
     @yield('content')
@@ -112,6 +126,10 @@
             pagination: {
                 el: ".swiper-pagination",
             },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
 
             on: {
                 slideChange: function() {
@@ -121,49 +139,53 @@
                             <div class="w-full max-w-5xl mx-auto">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-20 px-4">
                                     <div>
-                                        <h1 class="text-[50px] text-[#DFB266]">01</h1>
-                                        <hr class="border-[#DFB266] border-b-[2px]">
+                                        <h1 class="text-[50px] text-[#2b3d4f]">01</h1>
+                                        <hr class="border-[#2b3d4f] border-b-[2px]">
                                         <div class="text-[#000000] text-[15px] mt-2">
-                                            <h2 class="text-[#1C4089] font-[600] text-[18px]">Technical Excellence</h2>
-                                            <p class="mt-2">Striving for unparalleled proficiency in
-                                                the fields of Mechanical, Electrical, and Plumbing design and implementation.</p>
+                                            <h2 class="text-[#f26b27] font-[600] text-[18px]">Technical Excellence</h2>
+                                            <p class="mt-2 text-[#000000]">
+                                                Striving for unparalleled proficiency in
+                                                the fields of Mechanical, Electrical, and Plumbing design and implementation.
+                                            </p>
                                         </div>
                                     </div>
                                     <div>
-                                        <h1 class="text-[50px] text-[#DFB266]">02</h1>
-                                        <hr class="border-[#DFB266] border-b-[2px]">
+                                        <h1 class="text-[50px] text-[#2b3d4f]">02</h1>
+                                        <hr class="border-[#2b3d4f] border-b-[2px]">
                                         <div class="text-[#000000] text-[15px] mt-2">
-                                            <h2 class="text-[#1C4089] font-[600] text-[18px]">Innovation + Adaptability</h2>
+                                            <h2 class="text-[#f26b27] font-[600] text-[18px]">Innovation + Adaptability</h2>
                                             <p class="mt-2">Embracing a culture of innovation, continuous learning, and adaptability
                                                 to stay at the forefront of industry advancements.
                                                 </p>
                                         </div>
                                     </div>
                                     <div>
-                                        <h1 class="text-[50px] text-[#DFB266]">03</h1>
-                                        <hr class="border-[#DFB266] border-b-[2px]">
+                                        <h1 class="text-[50px] text-[#2b3d4f]">03</h1>
+                                        <hr class="border-[#2b3d4f] border-b-[2px]">
                                         <div class="text-[#000000] text-[15px] mt-2">
-                                            <h2 class="text-[#1C4089] font-[600] text-[18px]">Environmental Stewardship</h2>
+                                            <h2 class="text-[#f26b27] font-[600] text-[18px]">Environmental Stewardship</h2>
                                             <p class="mt-2">Demonstrating a strong commitment to environmental sustainability by
-                                                integrating eco-friendly practices into our operations and solutions.</p>
+                                            integrating eco-friendly practices into our operations and solutions.</p>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <h1 class="text-[50px] text-[#DFB266]">04</h1>
-                                        <hr class="border-[#DFB266] border-b-[2px]">
+                                        <h1 class="text-[50px] text-[#2b3d4f]">04</h1>
+                                        <hr class="border-[#2b3d4f] border-b-[2px]">
                                         <div class="text-[#000000] text-[15px] mt-2">
-                                            <h2 class="text-[#1C4089] font-[600] text-[18px]">Accountability</h2>
-                                            <p class="mt-2">Demonstrating a strong commitment to environmental sustainability by
-                                                integrating eco-friendly practices into our operations and solutions.</p>
+                                            <h2 class="text-[#f26b27] font-[600] text-[18px]">Accountability</h2>
+                                            <p class="mt-2">
+                                                Taking responsibility for our actions, decisions, and outcomes, and learning
+                                                from both successes and challenges.
+                                            </p>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <h1 class="text-[50px] text-[#DFB266]">05</h1>
-                                        <hr class="border-[#DFB266] border-b-[2px]">
+                                        <h1 class="text-[50px] text-[#2b3d4f]">05</h1>
+                                        <hr class="border-[#2b3d4f] border-b-[2px]">
                                         <div class="text-[#000000] text-[15px] mt-2">
-                                            <h2 class="text-[#1C4089] font-[600] text-[18px]">Client Satisfaction</h2>
+                                            <h2 class="text-[#f26b27] font-[600] text-[18px]">Client Satisfaction</h2>
                                             <p class="mt-2">Dedication to understanding, anticipating, and exceeding the needs and
                                                 expectations of our clients through exceptional service.
                                             </p>
@@ -173,7 +195,7 @@
                             </div>
                         `,
                         `
-                            <div class="w-full max-w-4xl mx-auto text-[14px] md:text-[16px] text-[#1C4089] text-center flex flex-col space-y-2">
+                            <div class="w-full max-w-6xl mx-auto text-[14px] md:text-[16px] text-[#000000] text-left flex flex-col space-y-2">
                                 <p>Our mission is to lead in Mechanical, Electrical, Plumbing, and Firefighting
                                     design, delivering international standard services.</p>
                                 <p>We actively engage with our customers, understand their challenges, and
@@ -183,7 +205,7 @@
                             </div>
                         `,
                         `
-                            <div class="w-full max-w-4xl mx-auto text-[14px] md:text-[16px] text-[#1C4089] text-center">
+                            <div class="w-full max-w-2xl mx-auto text-[14px] md:text-[16px] text-[#000000] text-left">
                                 To emerge as the forefront design firm in Mechanical, Electrical,
                                 Plumbing, and Firefighting, delivering services that adhere to
                                 international standards.
@@ -218,6 +240,11 @@
                 el: ".swiper-pagination",
             },
 
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
             on: {
                 slideChange: function() {
                     // Content for each slide
@@ -229,21 +256,21 @@
                                         <img src="{{ asset('assets/images/services/image-1.jpg') }}" alt="" class="w-full h-full">
                                     </div>
 
-                                    <div class="bg-[#1C4089] h-[300px] flex flex-col items-start justify-start">
+                                    <div class="bg-[#F26A27] h-[300px] flex flex-col items-start justify-start">
                                         <p class="text-[#ffffff] font-[700] px-10 text-start text-[16px] sm:text-[20px] w-[250px] sm:w-[340px] pt-4">Low Voltage
                                             System</p>
                                         <ul
                                             class="space-y-2 list-disc text-[10px] md:text-[11px] ml-6 sm:ml-10 text-[#ffffff] w-[200px] sm:w-[300px] mt-2">
-                                            <li>Main Feeder MV& LV Distribution.</li>
+                                            <li>Main Feeder MV & LV Distribution.</li>
                                             <li>General Lighting System.</li>
                                             <li>Emergency Lighting System.</li>
                                             <li>Power Supply System.</li>
-                                            <li>LV&ELV Cable Containment.</li>
+                                            <li>LV & ELV Cable Containment.</li>
                                             <li>Lightning Protection and Earthing System.</li>
                                         </ul>
                                     </div>
 
-                                    <div class="bg-[#1C4089] h-[300px] flex flex-col items-start justify-start">
+                                    <div class="bg-[#F26A27] h-[300px] flex flex-col items-start justify-start">
                                         <p class="text-[#ffffff] font-[700] px-10 text-start text-[16px] sm:text-[20px] w-[250px] sm:w-[340px] pt-4">Extra Low
                                             Voltage System</p>
                                         <ul
@@ -277,7 +304,7 @@
                                         <img src="{{ asset('assets/images/services/image-3.jpg') }}" alt="" class="w-full h-full">
                                     </div>
 
-                                    <div class="bg-[#1C4089] h-[300px] flex items-center justify-center">
+                                    <div class="bg-[#F26A27] h-[300px] flex items-center justify-center">
                                         <ul class="space-y-3 list-disc text-[12px] md:text-[14px] ml-6 sm:ml-8 text-[#ffffff] w-[200px] sm:w-[300px]">
                                             <li>
                                                 Fire Detection System
@@ -300,7 +327,7 @@
                                         </ul>
                                     </div>
 
-                                    <div class="bg-[#1C4089] h-[300px] flex items-center justify-center">
+                                    <div class="bg-[#F26A27] h-[300px] flex items-center justify-center">
                                         <ul class="space-y-3 list-disc text-[12px] md:text-[14px] ml-6 sm:ml-8 text-[#ffffff] w-[200px] sm:w-[300px]">
                                             <li>
                                                 Boiler System
@@ -320,9 +347,11 @@
                                         </ul>
                                     </div>
 
+
                                     <div class="flex items-center justify-center">
                                         <img src="{{ asset('assets/images/services/image-4.jpg') }}" alt="" class="w-full h-full">
                                     </div>
+
                                 </div>
                             </div>
                         `,
@@ -333,25 +362,18 @@
                                         <img src="{{ asset('assets/images/services/image-5.jpg') }}" alt="" class="w-full h-full">
                                     </div>
 
-                                    <div class="bg-[#1C4089] h-[300px] flex items-center justify-center">
+                                    <div class="bg-[#F26A27] h-[300px] flex flex-col space-y-4 items-center justify-center">
+                                        <p class="text-[#ffffff] font-[700] px-10 text-start text-[16px] sm:text-[20px] w-[250px] sm:w-[340px] pt-4">Air-Conditioning System</p>
                                         <ul class="space-y-3 list-disc text-[12px] md:text-[14px] ml-6 sm:ml-8 text-[#ffffff] w-[200px] sm:w-[300px]">
-                                            <li>
-                                                Air-Conditioning System
-                                            </li>
                                             <li>
                                                 Cool Room
                                             </li>
                                             <li>
                                                 Clean Room
                                             </li>
-                                             <li>
+                                            <li>
                                                 Ventilation System
                                             </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="bg-[#1C4089] h-[300px] flex items-center justify-center">
-                                        <ul class="space-y-3 list-disc text-[12px] md:text-[14px] ml-6 sm:ml-8 text-[#ffffff] w-[200px] sm:w-[300px]">
                                             <li>
                                                 Air-Curtain
                                             </li>
@@ -360,6 +382,29 @@
                                             </li>
                                             <li>
                                                 Central Gas System (LPG)
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="bg-[#F26A27] h-[300px] flex items-center justify-center">
+                                        <ul class="space-y-3 list-disc text-[12px] md:text-[14px] ml-6 sm:ml-8 text-[#ffffff] w-[200px] sm:w-[300px]">
+                                            <li>
+                                                Fire Detection System
+                                            </li>
+                                            <li>
+                                                Fire Hose System
+                                            </li>
+                                            <li>
+                                                 Fire Sprinkler System
+                                            </li>
+                                            <li>
+                                                Fm 200
+                                            </li>
+                                            <li>
+                                                 Fire Extinguisher
+                                            </li>
+                                            <li>
+                                                Cold & Hot Water Supply System
                                             </li>
                                         </ul>
                                     </div>
@@ -398,29 +443,63 @@
             pagination: {
                 el: ".swiper-pagination",
             },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
             on: {
-                slideChange: function() {
-                    document.querySelectorAll('.swiper-text').forEach(function(el) {
-                        el.style.display = 'none';
-                        el.style.opacity = 0;
-                        el.style.transform = 'translateY(20px)';
-                    });
+        init: function () {
+            jumpToSlideFromURL(this);
+        },
+    }
+            // on: {
+            //     slideChange: function() {
+            //         document.querySelectorAll('.swiper-text').forEach(function(el) {
+            //             el.style.display = 'none';
+            //             el.style.opacity = 0;
+            //             el.style.transform = 'translateY(20px)';
+            //         });
 
-                    var activeSlide = this.slides[this.activeIndex];
-                    var activeText = activeSlide.querySelector('.swiper-text');
-                    if (activeText) {
-                        activeText.style.display = 'block';
-                        setTimeout(() => {
-                            activeText.style.opacity = 1;
-                            activeText.style.transform = 'translateY(0)';
-                        }, 50);
-                    }
-                }
-            }
+            //         var activeSlide = this.slides[this.activeIndex];
+            //         var activeText = activeSlide.querySelector('.swiper-text');
+            //         if (activeText) {
+            //             activeText.style.display = 'block';
+            //             setTimeout(() => {
+            //                 activeText.style.opacity = 1;
+            //                 activeText.style.transform = 'translateY(0)';
+            //             }, 50);
+            //         }
+            //     }
+            // }
         });
+
+       function jumpToSlideFromURL(swiperInstance) {
+    const params = new URLSearchParams(window.location.search);
+    const slideId = params.get('slide'); // item1, item2...
+
+    if (!slideId) return;
+
+    const target = document.getElementById(slideId);
+    if (!target) return;
+
+    const realIndex = Number(target.dataset.swiperSlideIndex);
+
+    if (Number.isNaN(realIndex)) return;
+
+    // ✅ Safe jump after loop clones exist
+    swiperInstance.slideToLoop(realIndex, 0, false);
+
+    // Smooth scroll
+    const section = document.getElementById('our_experience');
+    section?.scrollIntoView({ behavior: 'smooth' });
+}
 
         AOS.init();
     </script>
+
+
+
+
 </body>
 
 </html>

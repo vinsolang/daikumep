@@ -35,72 +35,77 @@
             clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 83%);
         }
 
-        @keyframes scrollleft{
-            to{
+        /* Animation */
+        @keyframes scrollleft {
+            /* from {
+                            left: 100%;
+                        } */
+
+            to {
                 left: -200px;
+                /* width + gap */
             }
         }
 
-        .item{
+        /* Item style */
+        .item {
             width: 200px;
-            height: 150px;
+            height: 180px;
             border-radius: 6px;
             position: absolute;
-            left: max(calc(200px * 16), 100%);
-            animation-name: scrollleft;
-            animation-duration: 60s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            left: max(calc(200px * 9), 100%);
+            animation: scrollleft 45s linear infinite;
         }
 
-        .item1{
-            animation-delay: calc(60s / 16 * (16 - 1) * -1);
+        /* TOTAL ITEMS = 9 */
+        .item1 {
+            animation-delay: calc(45s / 9 * (9 - 1) * -1);
         }
-        .item2{
-            animation-delay: calc(60s / 16 * (16 - 2) * -1);
+
+        .item2 {
+            animation-delay: calc(45s / 9 * (9 - 2) * -1);
         }
-        .item3{
-            animation-delay: calc(60s / 16 * (16 - 3) * -1);
+
+        .item3 {
+            animation-delay: calc(45s / 9 * (9 - 3) * -1);
         }
-        .item4{
-            animation-delay: calc(60s / 16 * (16 - 4) * -1);
+
+        .item4 {
+            animation-delay: calc(45s / 9 * (9 - 4) * -1);
         }
-        .item5{
-            animation-delay: calc(60s / 16 * (16 - 5) * -1);
+
+        .item5 {
+            animation-delay: calc(45s / 9 * (9 - 5) * -1);
         }
-        .item6{
-            animation-delay: calc(60s / 16 * (16 - 6) * -1);
+
+        .item6 {
+            animation-delay: calc(45s / 9 * (9 - 6) * -1);
         }
-        .item7{
-            animation-delay: calc(60s / 16 * (16 - 7) * -1);
+
+        .item7 {
+            animation-delay: calc(45s / 9 * (9 - 7) * -1);
         }
-        .item8{
-            animation-delay: calc(60s / 16 * (16 - 8) * -1);
+
+        .item8 {
+            animation-delay: calc(45s / 9 * (9 - 8) * -1);
         }
-        .item9{
-            animation-delay: calc(60s / 16 * (16 - 9) * -1);
+
+        .item9 {
+            animation-delay: calc(45s / 9 * (9 - 9) * -1);
         }
-        .item10{
-            animation-delay: calc(60s / 16 * (16 - 10) * -1);
+
+        /* Optional: pause on hover */
+        .wrapper:hover .item {
+            animation-play-state: paused;
         }
-        .item11{
-            animation-delay: calc(60s / 16 * (16 - 11) * -1);
-        }
-        .item12{
-            animation-delay: calc(60s / 16 * (16 - 12) * -1);
-        }
-        .item13{
-            animation-delay: calc(60s / 16 * (16 - 13) * -1);
-        }
-        .item14{
-            animation-delay: calc(60s / 16 * (16 - 14) * -1);
-        }
-        .item15{
-            animation-delay: calc(60s / 16 * (16 - 15) * -1);
-        }
-        .item16{
-            animation-delay: calc(60s / 16 * (16 - 16) * -1);
-        }
+
+        /* @media (max-width: 640px) {
+                    .item {
+                        width: 150px;
+                        height: 100px;
+                        left: max(calc(160px * 9), 100%);
+                    }
+                } */
 
 
         @media screen and (max-width: 1023px) {
@@ -126,119 +131,643 @@
                 animation-iteration-count: infinite;
             }
         }
+
+        .filter-btn {
+            @apply flex items-center justify-center border border-[#F26A27] h-8 px-4 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-white transition;
+        }
+
+        .filter-btn.active {
+            background-color: #F26A27;
+            color: white;
+        }
+
+        .card:target {
+            transform: scale(1) !important;
+            opacity: 1 !important;
+            box-shadow: 0 20px 50px rgba(242, 106, 39, 0.45);
+            border: 2px solid #F26A27;
+        }
     </style>
 @endsection
 
 @section('content')
     {{-- company background --}}
-    <div class="relative -top-[30px] lg:-top-[100px] bg-[#1C4089] h-[550px] lg:h-[800px] home_clip">
-
-        <img src="{{ asset('assets/images/line.png') }}" alt="" class="w-full hidden lg:block pt-4 xl:pt-0"
-            data-aos="fade-up" data-aos-duration="1000">
+    <div class="relative -top-[30px] lg:-top-[100px] bg-[#F26A27] h-[550px] lg:h-[800px] home_clip">
+        <img src="{{ asset('assets/images/line.png') }}" alt=""
+            class="relative 2xl:-top-40 xl:-top-24 w-full hidden lg:block pt-4 xl:pt-20" data-aos="fade-up"
+            data-aos-duration="1000">
 
         <div id="company_background"
-            class="w-full max-w-4xl mx-auto flex flex-col items-center justify-center lg:justify-start lg:pt-10 text-start h-full text-[12px] md:text-[15px] font-[400] space-y-5 px-4 text-[#ffffff] overflow-hidden">
+            class="relative 2xl:-top-40 xl:-top-24 w-full max-w-3xl mx-auto flex flex-col items-center justify-center lg:justify-start lg:pt-10 text-left h-full text-[12px] md:text-[15px] font-[400] space-y-5 px-4 text-[#ffffff] overflow-hidden">
             <h1 class="text-[20px] md:text-[30px] font-[700] self-start" data-aos="fade-right" data-aos-duration="1500">
                 Company’s Background</h1>
-            <p data-aos="fade-left" data-aos-duration="1500">A2Z M&E is a company located in Phnom Penh, and it commenced
-                operations in early 2020, founded by a trio of
-                engineers with expertise in Mechanical and electrical design, Supplies and installation of engineering
-                solutions, and technical services for industrial and commercial buildings.</p>
-            <p data-aos="fade-right" data-aos-duration="1500">We officially registered with the Ministry of Commerce on
-                April 12, 2022, under the name A2Z M&E Engineering
-                Co., Ltd. The establishment of the company aimed to contribute to the thriving construction industry and
-                create valuable job opportunities for the younger generation.</p>
-            <p data-aos="fade-left" data-aos-duration="1500">At present, A2Z M&E operates with a workforce exceeding 70
-                employees, all of whom are highly skilled and
-                experienced in construction and management practices.</p>
+            <p data-aos="fade-left" data-aos-duration="1500">
+                Daiku MEP Solution is a mechanical, electrical and plumbing (MEP) service provider firm,
+                located in Phnom Penh. It has commenced operations in early 2020, founded by Mr. Phan Tola with
+                expertise in MEP design, supplies and installation of engineering solutions, and technical services for
+                industrial, residential and commercial buildings.
+            </p>
+            <p data-aos="fade-right" data-aos-duration="1500">
+                We officially registered with the Ministry of Commerce on under the name Daiku Solutions Co.,Ltd.
+                The establishment of the company aimed to contribute to the thriving construction industry and
+                create valuable job opportunities for the younger generation
+            </p>
+            <p data-aos="fade-left" data-aos-duration="1500">
+                At present, Daiku MEP Solution operate with highly skilled and
+                experienced in construction and management practices.
+            </p>
         </div>
     </div>
 
-    {{-- meesage from ceo --}}
-    <div class="relative w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div>
-            <img src="{{ asset('assets/images/people/ceo.png') }}" alt="CEO"
-                class="max-w-full h-auto relative object-center object-cover" data-aos="fade-right"
-                data-aos-duration="1500" />
-        </div>
-        <div id="message_from_ceo"
-            class="text-start text-[12px] md:text-[15px] font-[400] space-y-2 px-4 text-[#1C4089] overflow-hidden col-span-1 sm:col-span-2 py-10 sm:py-0">
-            <h1 class="text-[20px] md:text-[30px] font-[700]" data-aos="fade-right" data-aos-duration="1500">
-                Message From CEO</h1>
-            <h2 class="text-[#deb266] font-[700]" data-aos="fade-left" data-aos-duration="1500">Dear Valued
-                Stakeholders,</h2>
-            <p data-aos="fade-right" data-aos-duration="1500">I trust this message finds you well. As we reflect on our
-                journey, I am compelled to express our sincere
-                appreciation for the valuable partnership.</p>
-            <p data-aos="fade-left" data-aos-duration="1500">Your unwavering support, collaboration, and shared commitment
-                to excellence have played a pivotal role in our
-                mutual success. Together, we have achieved remarkable milestones and faced challenges with resilience,
-                reinforcing the
-                strength of our partnership.
-            </p>
-            <p data-aos="fade-right" data-aos-duration="1500">As we look to the future, I am excited about the opportunities
-                that lie ahead for both our entities. The
-                trust and synergy we have built serve as a solid foundation for continued growth and innovation.
-            </p>
-            <p data-aos="fade-left" data-aos-duration="1500">Thank you for being an integral part of our journey. We look
-                forward to further strengthening our
-                collaboration
-                and achieving even greater success projects together.</p>
-            <p class="" data-aos="fade-right" data-aos-duration="1500">Best regards,</p>
+    {{-- Project Credentials --}}
+    <div class="relative w-full">
+        <h1
+            class="text-start text-[20px] md:text-[30px] text-[#2b3d4f] font-[700] py-10 max-w-7xl mx-auto px-4 leading-none">
+            Project Credentials</h1>
+        {{-- Filter category of project --}}
+        <div class="flex flex-wrap gap-2 justify-center md:justify-end px-4 md:px-12">
 
-            <div>
-                <h2 class="text-[20px] md:text-[30px] font-[700]" data-aos="fade-left" data-aos-duration="1500">CEO's
-                    Background</h2>
-                <div class="text-[12px] md:text-[15px] font-[400]">
-                    <div class="" data-aos="fade-right" data-aos-duration="1500">
-                        <p class="font-[700] text-[14px] lg:text-[18px] xl:text-[20px] my-1 text-[#DFB266]">Mr. Phan Tola
-                        </p>
-                        <p class="mt-2">CEO, AZZ M&E</p>
-                    </div>
-                    <div class="" data-aos="fade-left" data-aos-duration="1500">
-                        <h1 class="text-[14px] lg:text-[18px] xl:text-[20px] text-[#DFB266] font-[700]">2013 - 2018</h1>
-                        <p class="mt-1">Bachelor Degree of Electrical Engineer at ITC.</p>
-                        <p class="mt-1">Experience: 10 Years in the construction sector.</p>
-                    </div>
+            <button
+                class="filter-btn active flex justify-center items-center border border-[#F26A27] w-16 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="all">All</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-24 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="resort">Resort</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-16 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="hotel">Hotel</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-24 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="polyclinic">Polyclinic</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-36 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="residence">Residence & Villa</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-24 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="aeon">Stores</button>
+            <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-32 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="restaurant">Restaurant</button>
+            {{-- <button
+                class="filter-btn flex justify-center items-center border border-[#F26A27] w-36 h-8 rounded-full cursor-pointer hover:bg-[#F26A27] hover:text-[#ffffff]"
+                data-filter="traffic">Traffic Tower</button> --}}
+
+        </div>
+
+        <div id="homeCardsWrapper"
+            class="py-12 xl:px-3 px-3 grid grid-cols-1 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 md:gap-x-6 gap-y-4 place-items-center">
+            {{-- Card 1 --}}
+            <div class="project-card relative bg-white shadow-xl xl:w-64 w-full h-[360px] overflow-hidden group rounded-lg"
+                data-category="hotel">
+
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/01.Sofitel/01.png') }}" alt=""
+                        class="w-full h-full object-cover">
                 </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                    <a href="{{ route('project') }}?slide=item1"
+                        class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold hover:bg-[#d85c20] transition -mt-2">
+                        <button>View Details</button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Hotel
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[15px] font-semibold">
+                            Sofitel Phnom Penh Phokeethra - 5 Stars Luxury Hotel
+                        </h3>
+                    </div>
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 2 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="resort">
+
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/2.SiemPang/01.png') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item2">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Resort
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Siem Pang Resort
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Stung Treng Province, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 3 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="polyclinic">
+
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/06.ChendaolyClinic/01.jpg') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item3">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Polyclinic
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Chenda Polyclinic
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 4 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                    xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="resort">
+
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/project/3.jpg') }}" alt="" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item4">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Resort
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Koh Tang Resort
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 5 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="residence">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/08.VillaYimsResedence/01.png') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item5">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Residence
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Yim’s Residence
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 6 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="residence">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/09.VillaSiemReap/01.jpg') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item6">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Villa
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Villa Siem Reap
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Siem Reap, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 7 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="aeon">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/10.CPS(AEONMALL3)/01.png') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item7">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            FASHIONS Store
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            CPS Aeon Mall Mean Chey
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 8 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="resort">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/20.OsoumResort/01.png') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item8">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Resort
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Samanea Wellness Resort
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Ousom Pursat Province, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 9 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="aeon">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/DaikuMEP/AeonMallMeanchey/01.jpg') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item9">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Aeon Mall
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Aeon Mall Mean Chey
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
+            </div>
+
+            {{-- Card 10 --}}
+            <div class="project-card relative bg-white shadow-xl
+                                     xl:w-64 w-full h-[360px]
+                                     overflow-hidden group rounded-lg"
+                data-category="restaurant">
+                <!-- Image -->
+                <div class="w-full h-[200px]">
+                    <img src="{{ asset('assets/images/project/9.png') }}" alt=""
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Hover overlay -->
+                <div
+                    class="absolute inset-0 bg-black/40
+                                            flex items-center justify-center
+                                            opacity-0 group-hover:opacity-100
+                                            transition duration-300">
+                    <a href="{{ route('project') }}?slide=item10">
+                        <button
+                            class="bg-[#F26A27] text-white px-6 py-2 rounded-md font-semibold
+                                                       hover:bg-[#d85c20] transition -mt-2">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Content -->
+                <div class="py-6 px-4 bg-white
+                                    flex flex-col h-full">
+
+                    <!-- Top content -->
+                    <div class="space-y-2">
+                        <p class="uppercase text-[#F26A27] font-bold text-[10px] md:text-[12px]">
+                            Restaurant
+                        </p>
+
+                        <h3 class="text-[#F26A27] min-h-16 text-[14px] md:text-[16px] font-semibold line-clamp-2">
+                            Kobe Teppanyaki Restaurant Koh Pich
+                        </h3>
+                    </div>
+
+                    <!-- Spacer -->
+                    {{-- <div class="flex-grow"></div> --}}
+
+                    <!-- Bottom content -->
+                    <p class="text-gray-600 text-[12px] md:text-[14px]">
+                        Phnom Penh, Cambodia
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <div class="bg-[#DFB266] h-[150px]" style="clip-path: polygon(100% 81%, 0 0, 100% 100%);">
-
-    </div>
-
-    {{-- notable clients --}}
-    {{-- <section id="notable_clients" class="">
-        <h1 class="text-center text-[20px] md:text-[30px] text-[#1C4089] font-[700]">Our Notable Clients</h1>
-        <img src="{{ asset('assets/images/services/clients.png') }}" alt="" class="object-cover object-center">
-    </section> --}}
-
     <section id="notable_clients" class="">
         <h1 class="text-center text-[20px] md:text-[30px] text-[#1C4089] font-[700]">Our Notable Clients</h1>
-        <div class="wrapper w-full max-w-7xl mx-auto relative h-[150px] sm:h-[200px] mt-[5rem] overflow-hidden">
-            <div class="item item1 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-1.jpg')"></div>
-            <div class="item item2 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-4.png')"></div>
-            <div class="item item3 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-5.jpg')"></div>
-            <div class="item item4 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-6.jpg')"></div>
-            <div class="item item5 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-7.jpg')"></div>
-            <div class="item item6 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-8.jpg')"></div>
-            <div class="item item7 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-9.jpg')"></div>
-            <div class="item item8 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-10.jpg')"></div>
-            <div class="item item9 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-11.png')"></div>
-            <div class="item item10 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-12.jpg')"></div>
-            <div class="item item11 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-13.png')"></div>
-            <div class="item item12 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-2.jpg')"></div>
-            <div class="item item13 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-3.jpg')"></div>
-            <div class="item item14 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-14.jpg')"></div>
-            <div class="item item15 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-15new.png')"></div>
-            <div class="item item16 bg-contain bg-center bg-no-repeat" style="background-image: url('assets/images/services/client-16.png')"></div>
+        <div class="wrapper w-full max-w-auto mx-auto relative h-[350px] sm:h-[400px] mt-[5rem] overflow-hidden">
+            <div class="item item1 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/client-15new.png')"></div>
+
+            <div class="item item2 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/2.png')"></div>
+
+            <div class="item item3 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/3.png')"></div>
+
+            <div class="item item4 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/4.jpg')"></div>
+
+            <div class="item item5 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('https://www.samanea-resort.com/wp-content/uploads/2025/02/Normal.png')">
+            </div>
+
+            <div class="item item6 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/6.jpg')"></div>
+
+            <div class="item item7 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/7.jpg')"></div>
+
+            <div class="item item8 bg-contain bg-center bg-no-repeat"
+                style="background-image: url('assets/images/client/8.jpg')"></div>
+            <div
+                class="item item9 flex items-center justify-center
+                            bg-white
+                            text-[#F26A27] font-semibold text-lg
+                            rounded-lg hover:text-[#F26A27]
+                            transition md:text-xl text-[14px] w-1/2">
+                + Many More</div>
         </div>
 
     </section>
 
-    {{--  --}}
+    {{-- --}}
     <section class="h-screen section_clip">
         <div class="w-full h-full relative top-[2rem] flex items-center justify-center bg-cover bg-center bg-scroll md:bg-fixed bg_clip"
             style="background-image: url('assets/images/home/bg-home.jpg');">
@@ -250,4 +779,44 @@
                 the strength of our partnership. </h1>
         </div>
     </section>
+
+    <script>
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".project-card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+
+                // Active button style
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                cards.forEach(card => {
+                    const category = card.dataset.category;
+
+                    if (filter === "all" || category === filter) {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                const target = document.querySelector(window.location.hash);
+                if (target) {
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center'
+                        });
+                    }, 200);
+                }
+            }
+        });
+    </script>
 @endsection
