@@ -52,6 +52,8 @@
             width: 10px;
             height: 10px;
             border-radius: 10px;
+            position: relative;
+            top: -50px;
         }
 
         .new_swiper .swiper-pagination .swiper-pagination-bullet-active {
@@ -147,10 +149,10 @@
 
                             <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                             <div class="clip absolute bottom-0 left-0
-                                        md:w-1/2 w-[80%]
+                                        md:w-1/2 w-full
                                         bg-black/50
                                         text-white
-                                        md:px-6 px-2 py-4">
+                                        md:px-10 px-2 py-4">
 
                                 <div class="space-y-1 text-[12px] leading-snug">
                                         <p>
@@ -172,8 +174,8 @@
                                     </div>
                             </div>
                         </div>
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed ">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed ">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -217,10 +219,10 @@
 
                             <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                             <div class="clip absolute bottom-0 left-0
-                                        md:w-1/2 w-[70%]
+                                        md:w-1/2 w-full
                                         bg-black/50
                                         text-white
-                                        md:px-6 px-2 py-4">
+                                        md:px-10 px-2 py-4">
 
                                 <div class="space-y-1 text-[12px] leading-snug">
                                     <p class="text-[12px]"><span class="font-bold">Project Name :</span> Siem Pang
@@ -236,8 +238,8 @@
                             </div>
                         </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -295,10 +297,10 @@
 
                             <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                             <div class="clip absolute bottom-0 left-0
-                                        md:w-1/2 w-[70%]
+                                        md:w-1/2 w-full
                                         bg-black/50
                                         text-white
-                                        md:px-6 px-2 py-4">
+                                        md:px-10 px-2 py-4">
 
                                 <div class="space-y-1 text-[12px] leading-snug">
                                     <p class="text-[12px]"><span class="font-bold">Project Name :</span>Chenda Polyclinic
@@ -310,9 +312,9 @@
                             </div>
 
                         </div>
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh]text-white bg-[#F26A27] py-4">
                             <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -364,7 +366,7 @@
 
                             <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                             <div class="clip absolute bottom-0 left-0
-                                    md:w-1/2 w-[70%]
+                                    md:w-1/2 w-full
                                     bg-[#000]/50
                                     text-white
                                     md:px-10 px-2 py-4">
@@ -379,9 +381,9 @@
                             </div>
                         </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                             <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -438,7 +440,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -452,9 +454,9 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                            <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -507,7 +509,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -521,9 +523,9 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                            <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -569,14 +571,14 @@
 
                     <div class="swiper-slide" id="item7">
                         <!-- IMAGE SECTION -->
-                            <div class="relative h-[250px] md:h-[600px]">
+                            <div class="relative h-[250px] md:h-[500px]">
                                 <!-- Background Image -->
                                 <img src="{{ asset('assets/images/DaikuMEP/10.CPS(AEONMALL3)/02.jpg') }}"
                                     class="absolute inset-0 w-full h-full object-cover" alt="Project Image">
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -602,9 +604,9 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                            <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -641,7 +643,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -667,14 +669,14 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                          <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
 
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-2 bg-[#F26A27] text-white">
+                                <div class="grid grid-cols-1 gap-x-4 gap-y-2 bg-[#F26A27] text-white">
                                     <ul class="list-disc list-inside space-y-1">
                                         <h1 class="text-[#2b3d4f] font-bold">Mechanical system and Electrical Infra Structure </h1>
                                         <li>Air Conditioning system (VRF and Single Split system) </li>
@@ -699,7 +701,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -725,9 +727,9 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                             <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:px-6 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -768,7 +770,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -782,7 +784,7 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                            <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
                             <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
@@ -837,7 +839,7 @@
 
                                 <!-- ORANGE OVERLAY (BOTTOM LEFT) -->
                                 <div class="clip absolute bottom-0 left-0
-                                md:w-1/2 w-[70%]
+                                md:w-1/2 w-full
                                 bg-[#000]/50
                                 text-white
                                 md:px-10 px-2 py-4">
@@ -852,9 +854,9 @@
                                 </div>
                             </div>
 
-                        <div class="w-full h-[80vh] xl:h-[45vh] md:h-[50vh] text-white bg-[#F26A27] py-4">
+                        <div class="w-full min-h-[60vh] xl:min-h-[35vh] md:min-h-[50vh] text-white bg-[#F26A27] py-4">
                            <!-- SCOPE OF WORK (NEXT / BELOW IMAGE) -->
-                            <div class="md:p-10 p-2 text-[12px] leading-relaxed bg-[#F26A27]">
+                            <div class="md:px-10 px-2 text-[12px] leading-relaxed bg-[#F26A27]">
                                 <h2 class="font-bold uppercase mb-4 text-[#ffffff]">
                                     Scope of Work
                                 </h2>
@@ -923,8 +925,7 @@
                     </div> --}}
                     
                 </div>
-                
+                 <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
     </section>
 @endsection
